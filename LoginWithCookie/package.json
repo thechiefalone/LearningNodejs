@@ -1,15 +1,16 @@
 {
-  "name": "restfullapi",
+  "name": "loginwithcookie",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "thechiefalone",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1"
+  }
 }
