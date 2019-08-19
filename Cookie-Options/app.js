@@ -22,6 +22,11 @@ app.get("/readCookie", (req, res) => {
   }
 });
 
+app.get("/clearCookie", (req, res) => {
+  res.clearCookie("mortalCookie");
+  res.send("Cookie Died");
+});
+
 app.listen(port, () => {
   console.log(`App listening on port ${port}!`);
 });
