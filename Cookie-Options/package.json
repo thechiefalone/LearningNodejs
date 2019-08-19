@@ -1,5 +1,5 @@
 {
-  "name": "cookie-manage",
+  "name": "cookie-options",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -7,5 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "thechiefalone",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1"
+  }
 }
