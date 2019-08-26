@@ -34,6 +34,12 @@ app.post("/add-blog", (req, res) => {
   res.redirect("/blog");
 });
 
+app.get("/login", (req, res) => {
+  res.render("login");
+});
+app.get("/register", (req, res) => {
+  res.render("register");
+});
 app.listen(port, () => {
   console.log(`App listening on port ${port}!`);
 });
