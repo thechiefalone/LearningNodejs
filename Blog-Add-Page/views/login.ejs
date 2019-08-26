@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Project Team with My SQL</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-   
-<h2>Login Form</h2>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form action="">
+      <div class="container">
+        <h1>Login</h1>
+        <p>Please fill in this form to login</p>
+        <hr />
 
-<form action="/action_page.php">
-  <div class="imgcontainer">
-    
-    <img src="logoUser.png" alt="Trulli" width="120" height="120">
-  </div>
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required />
 
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+        <label for="psw"><b>Password</b></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="psw"
+          required
+        />
+        <hr />
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-        
-    <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
+        <button type="submit" class="registerbtn">Login</button>
+      </div>
 
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button> 
-  <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
-</form> 
-</body>
+      <div class="container signin">
+        <p>You dont have an account ? <a href="/register">Register</a>.</p>
+        <p><a href="/blog">Home Page</a>.</p>
+      </div>
+    </form>
+  </body>
 </html>
