@@ -5,22 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <style>
-      body {
-        display: flex;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-      }
-    </style>
+    <link rel="stylesheet" href="/add-blog.css" />
   </head>
   <body>
-    <form action="/add-blog" method="post">
-      <h3>Blog Title</h3>
-      <input type="text" name="blogTitle" id="blog-title" />
-      <h3>Blog Post</h3>
-      <textarea name="blogPost" id="blog-post" cols="30" rows="10"></textarea>
-      <h4>Submit Blog <button>Submit</button></h4>
-    </form>
+    <div class="wrapper">
+      <form action="/add-blog" method="post">
+        <div class="field">
+          <input
+            type="text"
+            id="name"
+            name="blogTitle"
+            placeholder="Write your Blog Title"
+            autofocus
+          />
+          <label for="blogTitle">Blog Title</label>
+        </div>
+
+        <div class="field">
+          <textarea
+            id="msg"
+            rows="4"
+            name="blogPost"
+            placeholder="Write here your Blog Post"
+          ></textarea>
+          <label for="blogPost">Blog Post</label>
+        </div>
+        <input class="button" type="submit" value="Send" />
+        <a href="/blog">or Go to Blog Page Again</a>
+      </form>
+    </div>
   </body>
 </html>
