@@ -20,7 +20,10 @@ app.get("/testConnection", (req, res) => {
 });
 app.get("/customers", (req, res) => {
   sql
-    .sqlQuery("SELECT customerName from customers ORDER BY customerName ASC ")
+    // .sqlQuery("SELECT customerName from customers ORDER BY customerName ASC ")
+    .sqlQuery(
+      "SELECT customerName from customers WHERE customerName like 'a%' "
+    )
     .then(result => {
       let content = "";
       result.forEach(element => {
