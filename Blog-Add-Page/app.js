@@ -17,7 +17,9 @@ let allBlogPosts = [
   { blogTitle: "Second Blog", blogPost: "This is my second blog" },
   { blogTitle: "Third Blog", blogPost: "This is my third blog" }
 ];
-
+app.get("/", (req, res) => {
+  res.redirect("/blog");
+});
 app.get("/blog", (req, res) => {
   res.render("blog", { allBlogPosts: allBlogPosts });
 });
