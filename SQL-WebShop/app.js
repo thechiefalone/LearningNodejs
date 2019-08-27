@@ -23,7 +23,7 @@ app.get("/customers", (req, res) => {
     // .sqlQuery("SELECT customerName from customers ORDER BY customerName ASC ")
     .sqlQuery(
       //   "SELECT customerName from customers WHERE customerName like 'a%' "
-      "SELECT concat(contactFirstName, ' ', contactLastName) as customerName from customers ORDER BY customerName ASC"
+      "SELECT concat(contactFirstName, ' ', contactLastName, ' ', country) as customerName from customers WHERE country like 'USA' ORDER BY customerName ASC"
     )
     .then(result => {
       let content = "";
