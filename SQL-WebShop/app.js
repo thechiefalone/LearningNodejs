@@ -24,12 +24,13 @@ app.get("/customers", (req, res) => {
     .sqlQuery(
       // "SELECT customerName from customers WHERE customerName like 'a%' "
       // "SELECT concat(contactFirstName, ' ', contactLastName, ' ', country) as customerName from customers WHERE country like 'USA' ORDER BY customerName ASC"
-      "SELECT orderNumber from orders WHERE (orderDate BETWEEN '2003-02-01' AND '2003-02-28')"
+      //   "SELECT orderNumber from orders WHERE (orderDate BETWEEN '2003-02-01' AND '2003-02-28')"
+      "SELECT SUM(payments.amount) AS totalAmount from payments INNER JOIN customers on customers.customerNumber=payments.customerNumber WHERE customers.country like 'USA' and payments.paymentDate between '2003-01-01' and '2003-06-01'"
     )
     .then(result => {
       let content = "";
       result.forEach(element => {
-        content += element.orderNumber + "<br>";
+        content += element.totalAmount + "<br>";
       });
       res.send(content);
     })
